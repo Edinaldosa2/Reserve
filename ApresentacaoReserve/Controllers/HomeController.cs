@@ -18,6 +18,11 @@ namespace ApresentacaoReserve.Controllers
             return View();
         }
 
+        public IActionResult JavaScript()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

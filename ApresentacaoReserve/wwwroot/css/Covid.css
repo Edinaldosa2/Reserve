@@ -27,3 +27,97 @@ h1.display-4 {
     #covidTop10 li:hover {
         box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+ol {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: auto;
+}
+
+    ol li {
+        background-color: white;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+        ol li:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+.nav-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+    .nav-link:hover, .nav-link:focus {
+        background-color: #0056b3;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+#jsButton {
+    background-color: #28a745; /* Green */
+}
+
+    #jsButton:hover, #jsButton:focus {
+        background-color: #218838;
+    }
+
+#csharpButton {
+    background-color: #dc3545; /* Red */
+}
+
+    #csharpButton:hover, #csharpButton:focus {
+        background-color: #c82333;
+    }
+
+.nav-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-image: linear-gradient(to right, #6dd5ed, #2193b0);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .nav-link:hover, .nav-link:focus {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+#jsButton {
+    background-image: linear-gradient(to right, #56ab2f, #a8e063); /* Green gradient */
+}
+
+#csharpButton {
+    background-image: linear-gradient(to right, #ff416c, #ff4b2b); /* Red gradient */
+}
