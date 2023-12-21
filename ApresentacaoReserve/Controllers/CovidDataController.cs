@@ -4,16 +4,21 @@ using Microsoft.AspNetCore.Mvc;
 
 public class CovidDataController : Controller
 {
-    private readonly ICovidDataFetcher _covidDataFetcher;
+    private readonly ICovidDataFetcher covidDataFetcher;
 
     public CovidDataController(ICovidDataFetcher covidDataFetcher)
     {
-        _covidDataFetcher = covidDataFetcher;
+        this.covidDataFetcher = covidDataFetcher;
     }
 
     public async Task<IActionResult> Top10ActiveCases()
     {
-        var data = await _covidDataFetcher.FetchTop10CountriesWithActiveCases();
+        var data = await covidDataFetcher.FetchTop10CountriesWithActiveCases();
         return View(data); 
+    }
+
+    public IActionResult Index()
+    {
+        return View();
     }
 }
