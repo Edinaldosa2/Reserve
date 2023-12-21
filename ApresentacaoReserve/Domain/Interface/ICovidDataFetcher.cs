@@ -1,6 +1,7 @@
 ﻿namespace ApresentacaoReserve.Domain.Interface
 {
-    public class ICovidDataFetcher
+    public interface ICovidDataFetcher
     {
+        Task<IEnumerable<CovidCountryData>> FetchTop10CountriesWithActiveCases();
     }
 }

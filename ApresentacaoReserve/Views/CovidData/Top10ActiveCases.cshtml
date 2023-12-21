@@ -1,0 +1,15 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<CovidCountryData>
+
+<h1>Top 10 Países com Mais Casos Ativos de Covid-19</h1>
+
+<ol>
+    @foreach (var country in Model)
+    {
+        <li>@country.Rank. @country.Name - Casos ativos: @country.ActiveCases</li>
+    }
+</ol>
