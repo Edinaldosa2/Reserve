@@ -1,5 +1,4 @@
-﻿// Dentro de MyProject.Web.Controllers
-using ApresentacaoReserve.Domain.Interface;
+﻿using ApresentacaoReserve.Domain.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 public class CovidDataController : Controller
