@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Inicial";
+}
+    <link rel="stylesheet" href="~/css/Covid.css">
+
+
+<div class="text-center">
+    <h1 class="display-4">Lista dos casos Covid-19</h1>
+   
+    <div id="covidTop10">  </div>
+    </div>
+
+
+<script>
+    async function fetchCovidData() {
+        try {
+            const response = await fetch('https://disease.sh/v3/covid-19/countries');
+            const data = await response.json();
+            return data.map(country => ({
+                name: country.country,
+                activeCases: country.cases - country.recovered
+            }));
+        } catch (error) {
+            console.error('Erro ao buscar dados de Covid-19:', error);
+        }
+    }
+
+    function displayTop10Countries(countries) {
+        countries.sort((a, b) => b.activeCases - a.activeCases);
+        const top10 = countries.slice(0, 10);
+
+        let html = '<ol>';
+        top10.forEach((country, index) => {
+            html += `<li>${index + 1}. ${country.name} - Casos ativos: ${country.activeCases.toLocaleString()}</li>`;
+        });
+        html += '</ol>';
+
+        document.getElementById('covidTop10').innerHTML = html;
+    }
+
+    async function main() {
+        const countries = await fetchCovidData();
+        if (countries) {
+            displayTop10Countries(countries);
+        }
+    }
+
+
+
+    main();
+</script>
